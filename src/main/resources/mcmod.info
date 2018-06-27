@@ -1,0 +1,16 @@
+[
+{
+  "modid": "spicymod",
+  "name": "Spicy Chili Peppers Mod",
+  "description": "A mod about chili peppers and their spicyness",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Davoleo"],
+  "credits": "Davoleo - c - 2018",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

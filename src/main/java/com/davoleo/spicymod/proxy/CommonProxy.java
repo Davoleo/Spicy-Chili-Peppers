@@ -1,7 +1,7 @@
-package com.davoleo.spicy_mod.proxy;
+package com.davoleo.spicymod.proxy;
 
-import com.davoleo.spicy_mod.init.Config;
-import com.davoleo.spicy_mod.item.ItemJalapeno;
+import com.davoleo.spicymod.init.Config;
+import com.davoleo.spicymod.item.ItemJalapeno;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;

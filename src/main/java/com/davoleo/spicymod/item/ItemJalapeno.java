@@ -1,9 +1,9 @@
-package com.davoleo.spicy_mod.item;
+package com.davoleo.spicymod.item;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
-import com.davoleo.spicy_mod.SpicyMod;
+import com.davoleo.spicymod.SpicyMod;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

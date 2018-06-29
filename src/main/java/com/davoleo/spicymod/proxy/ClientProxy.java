@@ -1,8 +1,8 @@
-package com.davoleo.spicy_mod.proxy;
+package com.davoleo.spicymod.proxy;
 
-import com.davoleo.spicy_mod.SpicyMod;
-import com.davoleo.spicy_mod.item.ItemJalapeno;
-import com.davoleo.spicy_mod.item.ModItems;
+import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.item.ItemJalapeno;
+import com.davoleo.spicymod.item.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;

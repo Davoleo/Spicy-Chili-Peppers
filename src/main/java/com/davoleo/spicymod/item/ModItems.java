@@ -1,10 +1,8 @@
-package com.davoleo.spicy_mod.item;
+package com.davoleo.spicymod.item;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.registries.IForgeRegistry;
 
 /*************************************************
  * Author: Davoleo

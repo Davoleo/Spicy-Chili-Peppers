@@ -15,11 +15,8 @@ import net.minecraft.item.ItemStack;
 
 public class SpicyCreativeTab extends CreativeTabs {
 
-    //public final ItemStack jalapeno;
-
     public SpicyCreativeTab(){
         super(SpicyMod.MODID);
-        //jalapeno = (Items.STONE_SWORD);
     }
 
     @Override

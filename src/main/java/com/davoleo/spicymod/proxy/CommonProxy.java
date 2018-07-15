@@ -1,6 +1,7 @@
 package com.davoleo.spicymod.proxy;
 
 import com.davoleo.spicymod.init.Config;
+import com.davoleo.spicymod.item.ItemHabanero;
 import com.davoleo.spicymod.item.ItemJalapeno;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -57,6 +58,7 @@ public class CommonProxy {
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         event.getRegistry().register(new ItemJalapeno());
+        event.getRegistry().register(new ItemHabanero());
     }
 
 }

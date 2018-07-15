@@ -17,9 +17,13 @@ public class ModItems{
     @GameRegistry.ObjectHolder("spicymod:jalapeno")
     public static ItemJalapeno jalapeno;
 
+    @GameRegistry.ObjectHolder("spicymod:habanero")
+    public static ItemHabanero habanero;
+
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         jalapeno.initModel();
+        habanero.initModel();
     }
 
 }

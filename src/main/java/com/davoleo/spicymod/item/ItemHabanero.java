@@ -2,15 +2,20 @@ package com.davoleo.spicymod.item;
 
 import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /*************************************************
  * Author: Davoleo
@@ -30,6 +35,10 @@ public class ItemHabanero extends ItemFood {
         setCreativeTab(SpicyMod.creativeTab);
     }
 
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
+    {
+        tooltip.add(TextFormatting.GOLD + "Britghy-Spicy Sun");
+    }
 
     @Override
     protected void onFoodEaten(ItemStack Stack, World World, EntityPlayer Player)

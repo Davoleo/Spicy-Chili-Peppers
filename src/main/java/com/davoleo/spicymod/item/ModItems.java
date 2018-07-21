@@ -20,10 +20,18 @@ public class ModItems{
     @GameRegistry.ObjectHolder("spicymod:habanero")
     public static ItemHabanero habanero;
 
+    @GameRegistry.ObjectHolder("spicymod:jalapeno_seeds")
+    public static ItemSeedJalapeno jalapeno_seeds;
+
+    @GameRegistry.ObjectHolder("spicymod:habanero_seeds")
+    public static ItemSeedHabanero habanero_seeds;
+
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         jalapeno.initModel();
         habanero.initModel();
+        jalapeno_seeds.initModel();
+        habanero_seeds.initModel();
     }
 
 }

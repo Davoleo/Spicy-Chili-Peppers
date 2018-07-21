@@ -1,10 +1,15 @@
 package com.davoleo.spicymod.proxy;
 
+import com.davoleo.spicymod.block.ModBlocks;
+import com.davoleo.spicymod.block.TestBlock;
 import com.davoleo.spicymod.init.Config;
 import com.davoleo.spicymod.item.ItemHabanero;
 import com.davoleo.spicymod.item.ItemJalapeno;
+import com.davoleo.spicymod.item.ItemSeedHabanero;
+import com.davoleo.spicymod.item.ItemSeedJalapeno;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -52,13 +57,18 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
+        event.getRegistry().register(new TestBlock());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
+        event.getRegistry().register(new ItemBlock(ModBlocks.testblock).setRegistryName(ModBlocks.testblock.getRegistryName()));
+
         event.getRegistry().register(new ItemJalapeno());
         event.getRegistry().register(new ItemHabanero());
+        event.getRegistry().register(new ItemSeedJalapeno());
+        event.getRegistry().register(new ItemSeedHabanero());
     }
 
 }

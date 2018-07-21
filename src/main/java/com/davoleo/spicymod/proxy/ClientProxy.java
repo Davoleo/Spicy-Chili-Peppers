@@ -1,5 +1,6 @@
 package com.davoleo.spicymod.proxy;
 
+import com.davoleo.spicymod.block.ModBlocks;
 import com.davoleo.spicymod.item.ModItems;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +27,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         ModItems.initModels();
+        ModBlocks.initModels();
     }
 
 }

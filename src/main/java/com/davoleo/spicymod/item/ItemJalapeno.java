@@ -3,7 +3,6 @@ package com.davoleo.spicymod.item;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
@@ -11,12 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.loot.properties.EntityOnFire;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
@@ -31,8 +27,6 @@ import java.util.List;
 //ItemJalapeno permette di aggiungere item successivi con più facilità
 public class ItemJalapeno extends ItemFood {
 
-    private EntityPlayer entityplayer;
-
     public ItemJalapeno()
     {
         super(3, 0.4f, false);
@@ -42,7 +36,6 @@ public class ItemJalapeno extends ItemFood {
         setAlwaysEdible();
 
     }
-
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {

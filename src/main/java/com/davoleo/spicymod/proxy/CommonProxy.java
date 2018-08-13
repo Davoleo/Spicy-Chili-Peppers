@@ -1,24 +1,7 @@
 package com.davoleo.spicymod.proxy;
 
-import com.davoleo.spicymod.block.ModBlocks;
-import com.davoleo.spicymod.block.TestBlock;
-import com.davoleo.spicymod.init.Config;
-import com.davoleo.spicymod.item.ItemHabanero;
-import com.davoleo.spicymod.item.ItemJalapeno;
-import com.davoleo.spicymod.item.ItemSeedHabanero;
-import com.davoleo.spicymod.item.ItemSeedJalapeno;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import java.io.File;
 
 /*************************************************
  * Author: Davoleo
@@ -32,43 +15,7 @@ import java.io.File;
 @Mod.EventBusSubscriber
 public class CommonProxy {
 
-    // Config instance
-    public static Configuration config;
-
-    public void preInit(FMLPreInitializationEvent e)
-    {
-        File directory = e.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "SpicyChiliPeppers.cfg"));
-        Config.readConfig();
-    }
-
-    public void init(FMLInitializationEvent e)
-    {
-    }
-
-    public void postInit(FMLPostInitializationEvent e)
-    {
-        if (config.hasChanged())
-        {
-            config.save();
-        }
-    }
-
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event)
-    {
-        event.getRegistry().register(new TestBlock());
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event)
-    {
-        event.getRegistry().register(new ItemBlock(ModBlocks.testblock).setRegistryName(ModBlocks.testblock.getRegistryName()));
-
-        event.getRegistry().register(new ItemJalapeno());
-        event.getRegistry().register(new ItemHabanero());
-        event.getRegistry().register(new ItemSeedJalapeno());
-        event.getRegistry().register(new ItemSeedHabanero());
-    }
+    public void registerItemRenderer(Item item, int meta, String id)
+    {}
 
 }

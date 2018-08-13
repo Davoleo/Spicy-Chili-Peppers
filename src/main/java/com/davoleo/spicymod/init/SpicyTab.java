@@ -7,21 +7,23 @@ import net.minecraft.item.ItemStack;
 
 /*************************************************
  * Author: Davoleo
- * Date: 29/06/2018
- * Hour: 17.10
+ * Date: 13/08/2018
+ * Hour: 10.43
  * Project: Spicy_mod
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public class SpicyCreativeTab extends CreativeTabs {
+public class SpicyTab extends CreativeTabs {
 
-    public SpicyCreativeTab(){
-        super(SpicyMod.MODID);
+    public SpicyTab()
+    {
+        super(SpicyMod.MODNAME);
+        setBackgroundImageName("");
     }
 
     @Override
-    public ItemStack getTabIconItem() {
+    public ItemStack getTabIconItem()
+    {
         return new ItemStack(ModItems.jalapeno);
     }
-
 }

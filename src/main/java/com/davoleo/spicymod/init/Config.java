@@ -24,12 +24,12 @@ public class Config {
     // Call this from CommonProxy.preInit(). It will create our config if it doesn't
     // exist yet and read the values if it does exist.
     public static void readConfig() {
-        Configuration cfg = CommonProxy.config;
+        Configuration cfg = SpicyMod.config;
         try {
             cfg.load();
             initGeneralConfig(cfg);
         } catch (Exception e1) {
-            SpicyMod.logger.log(Level.ERROR, "Problem loading config file!", e1);
+            System.out.println("ERROR LOADING SPICY CHILI PEPPERS CONFIG FILE!");
         } finally {
             if (cfg.hasChanged()) {
                 cfg.save();

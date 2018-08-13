@@ -1,7 +1,7 @@
-package com.davoleo.spicymod.item;
+package com.davoleo.spicymod.item.food;
 
-import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -13,44 +13,45 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
 import javax.annotation.Nullable;
 import java.util.List;
 
 /*************************************************
  * Author: Davoleo
- * Date: 30/06/2018
- * Hour: 21.47
+ * Date: 26/06/2018
+ * Hour: 19.05
  * Project: Spicy_mod
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public class ItemHabanero extends ItemFood {
+//ItemJalapeno permette di aggiungere item successivi con più facilità
+public class ItemJalapeno extends ItemFood {
 
-    public ItemHabanero()
+    public ItemJalapeno()
     {
-        super(5,1F, false);
-        setRegistryName("habanero");
-        setUnlocalizedName(SpicyMod.MODID + ".habanero");
-        setCreativeTab(SpicyMod.creativeTab);
+        super(3, 0.4f, false);
+        setRegistryName("jalapeno");        // The unique name that identifies this item, does NEVER change
+        setUnlocalizedName(SpicyMod.MODID + ".jalapeno");     // Used for localization (en_US.lang)
+        setCreativeTab(SpicyMod.spicyTab);
+        setAlwaysEdible();
     }
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(TextFormatting.GOLD + "Britghy-Spicy Sun");
+        tooltip.add(TextFormatting.RED + "It feels spicy even to keep it in your hands!");
     }
 
     @Override
     protected void onFoodEaten(ItemStack Stack, World World, EntityPlayer Player)
     {
-        Player.setFire(6);
-        Player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 2400, 1, true, false));
-        Player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 1, true, false));
+        Player.setFire(10);
+        Player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 2800, 1, false, false));
     }
 
     @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    public void registerItemModel()
+    {
+        SpicyMod.proxy.registerItemRenderer(this, 0, "jalapeno");
     }
 
 }

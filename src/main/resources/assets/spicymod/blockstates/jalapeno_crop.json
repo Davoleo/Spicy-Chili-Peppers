@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cross"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/1"
+        }
+      },
+      "2": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/2"
+        }
+      },
+      "3": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/3"
+        }
+      },
+      "4": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/4"
+        }
+      },
+      "5": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/5"
+        }
+      },
+      "6": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/6"
+        }
+      },
+      "7": {
+        "textures": {
+          "cross": "spicymod:blocks/jalapeno/7"
+        }
+      }
+    }
+  }
+}

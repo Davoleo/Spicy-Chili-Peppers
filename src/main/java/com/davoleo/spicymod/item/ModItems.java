@@ -1,8 +1,10 @@
 package com.davoleo.spicymod.item;
 
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import com.davoleo.spicymod.block.ModBlocks;
+import com.davoleo.spicymod.item.food.ItemHabanero;
+import com.davoleo.spicymod.item.food.ItemJalapeno;
+import net.minecraft.item.Item;
+import net.minecraftforge.registries.IForgeRegistry;
 
 /*************************************************
  * Author: Davoleo
@@ -14,24 +16,30 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems{
 
-    @GameRegistry.ObjectHolder("spicymod:jalapeno")
-    public static ItemJalapeno jalapeno;
+    //istanze
+    public static ItemSeedBase seed_jalapeno = new ItemSeedBase("jalapeno_seed", ModBlocks.crop_habanero);
+    public static ItemSeedBase seed_habanero = new ItemSeedBase("habanero_seed", ModBlocks.crop_jalapeno);
+    public static ItemJalapeno jalapeno = new ItemJalapeno();
+    public static ItemHabanero habanero = new ItemHabanero();
 
-    @GameRegistry.ObjectHolder("spicymod:habanero")
-    public static ItemHabanero habanero;
+    //Registro di forge
+    public static void register(IForgeRegistry<Item> registry)
+    {
+        registry.registerAll(
+                seed_jalapeno,
+                seed_habanero,
+                jalapeno,
+                habanero
+        );
+    }
 
-    @GameRegistry.ObjectHolder("spicymod:jalapeno_seeds")
-    public static ItemSeedJalapeno jalapeno_seeds;
-
-    @GameRegistry.ObjectHolder("spicymod:habanero_seeds")
-    public static ItemSeedHabanero habanero_seeds;
-
-    @SideOnly(Side.CLIENT)
-    public static void initModels() {
-        jalapeno.initModel();
-        habanero.initModel();
-        jalapeno_seeds.initModel();
-        habanero_seeds.initModel();
+//Registrazione dei modelli
+    public static void registerModels()
+    {
+        seed_habanero.registerItemModel();
+        seed_jalapeno.registerItemModel();
+        jalapeno.registerItemModel();
+        habanero.registerItemModel();
     }
 
 }

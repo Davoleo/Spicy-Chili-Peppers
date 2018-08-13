@@ -1,10 +1,10 @@
 package com.davoleo.spicymod.block;
 
-import com.davoleo.spicymod.block.crop.BlockHabaneroCrop;
-import com.davoleo.spicymod.block.crop.BlockJalapenoCrop;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import com.davoleo.spicymod.item.ItemSeedBase;
+import com.davoleo.spicymod.item.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraftforge.registries.IForgeRegistry;
 
 /*************************************************
  * Author: Davoleo
@@ -16,19 +16,34 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModBlocks {
 
-    @GameRegistry.ObjectHolder("spicymod:testblock")
-    public static TestBlock testblock;
+    //istanze
+   public static BlockCropBase crop_habanero = new BlockCropBase("habanero_crop", ModItems.seed_habanero, ModItems.habanero);
+   public static BlockCropBase crop_jalapeno = new BlockCropBase("jalapeno_crop", ModItems.seed_jalapeno, ModItems.jalapeno);
 
-    @GameRegistry.ObjectHolder("spicymod:jalapeno_crop")
-    public static BlockJalapenoCrop jalapeno_crop;
-
-    @GameRegistry.ObjectHolder("spicymod:habanero_crop")
-    public static BlockHabaneroCrop habanero_crop;
-
-
-    @SideOnly(Side.CLIENT)
-    public static void initModels()
+    //Registro di forge
+    public static void register(IForgeRegistry<Block> registry)
     {
-        testblock.initModel();
+        registry.registerAll(
+                crop_habanero,
+                crop_jalapeno
+
+        );
+
+        //Gameregistry (tile esntities)
+
+    }
+
+    //Registrazione itemblock
+    public static void registerItemBlocks(IForgeRegistry<Item> registry)
+    {
+        registry.registerAll(
+
+        );
+    }
+
+    //Registrazione dei modelli
+
+    public static void registerModels() {
+
     }
 }

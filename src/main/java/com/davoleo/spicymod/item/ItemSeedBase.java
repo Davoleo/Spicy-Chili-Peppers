@@ -20,9 +20,13 @@ public class ItemSeedBase extends ItemSeeds {
 
     public ItemSeedBase(String name, BlockCropBase crop)
     {
+
         super(crop, Blocks.FARMLAND);
         setUnlocalizedName(name);
         setRegistryName(name);
+
+        this.name = name;
+        this.crop = crop;
 
         setCreativeTab(SpicyMod.spicyTab);
     }

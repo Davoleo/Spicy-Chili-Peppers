@@ -5,7 +5,9 @@ import com.davoleo.spicymod.item.ItemSeedBase;
 import com.davoleo.spicymod.item.ModItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
+import net.minecraftforge.client.model.ModelLoader;
 
 /*************************************************
  * Author: Davoleo
@@ -37,5 +39,15 @@ public class BlockCropBase extends BlockCrops {
     @Override
     protected Item getCrop() {
         return crop;
+    }
+
+    public Item createItemBlock()
+    {
+        return new ItemBlock(this).setRegistryName(getRegistryName());
+    }
+
+    public void registerItemModel(Item itemBlock)
+    {
+        SpicyMod.proxy.registerItemRenderer(itemBlock, 0, name);
     }
 }

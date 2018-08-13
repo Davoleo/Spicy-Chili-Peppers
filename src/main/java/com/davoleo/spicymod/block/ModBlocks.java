@@ -1,6 +1,5 @@
 package com.davoleo.spicymod.block;
 
-import com.davoleo.spicymod.item.ItemSeedBase;
 import com.davoleo.spicymod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -37,13 +36,12 @@ public class ModBlocks {
     public static void registerItemBlocks(IForgeRegistry<Item> registry)
     {
         registry.registerAll(
-
         );
     }
 
     //Registrazione dei modelli
-
     public static void registerModels() {
-
+        crop_habanero.registerItemModel(crop_habanero.createItemBlock());
+        crop_jalapeno.registerItemModel(crop_jalapeno.createItemBlock());
     }
 }

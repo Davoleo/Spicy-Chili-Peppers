@@ -7,42 +7,42 @@
 		"age": {
 			"0": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/0"
+					"cross": "spicymod:blocks/crop/habanero/0"
 				}
 			},
 			"1": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/1"
+					"cross": "spicymod:blocks/crop/habanero/1"
 				}
 			},
 			"2": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/2"
+					"cross": "spicymod:blocks/crop/habanero/2"
 				}
 			},
 			"3": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/3"
+					"cross": "spicymod:blocks/crop/habanero/3"
 				}
 			},
 			"4": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/4"
+					"cross": "spicymod:blocks/crop/habanero/4"
 				}
 			},
 			"5": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/5"
+					"cross": "spicymod:blocks/crop/habanero/5"
 				}
 			},
 			"6": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/6"
+					"cross": "spicymod:blocks/crop/habanero/6"
 				}
 			},
 			"7": {
 				"textures": {
-					"cross": "spicymod:blocks/habanero/7"
+					"cross": "spicymod:blocks/crop/habanero/7"
 				}
 			}
 		}

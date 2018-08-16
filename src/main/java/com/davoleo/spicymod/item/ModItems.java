@@ -3,9 +3,8 @@ package com.davoleo.spicymod.item;
 import com.davoleo.spicymod.block.ModBlocks;
 import com.davoleo.spicymod.item.food.ItemHabanero;
 import com.davoleo.spicymod.item.food.ItemJalapeno;
-import net.minecraft.init.Blocks;
+import com.davoleo.spicymod.item.seed.ItemSeedBase;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /*************************************************

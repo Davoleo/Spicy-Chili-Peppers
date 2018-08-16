@@ -1,6 +1,7 @@
 package com.davoleo.spicymod.item.food;
 
 import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.util.Tooltips;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -35,7 +36,7 @@ public class ItemHabanero extends ItemFood {
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(TextFormatting.GOLD + "Britghy-Spicy Sun");
+        tooltip.add(Tooltips.HABANERO);
     }
 
     protected void onFoodEaten(ItemStack Stack, World World, EntityPlayer Player)

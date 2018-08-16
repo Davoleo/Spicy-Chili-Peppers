@@ -1,9 +1,7 @@
-package com.davoleo.spicymod.init;
+package com.davoleo.spicymod.util;
 
 import com.davoleo.spicymod.SpicyMod;
-import com.davoleo.spicymod.proxy.CommonProxy;
 import net.minecraftforge.common.config.Configuration;
-import org.apache.logging.log4j.Level;
 
 /*************************************************
  * Author: Davoleo

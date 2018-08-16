@@ -1,4 +1,4 @@
-package com.davoleo.spicymod.init;
+package com.davoleo.spicymod.util;
 
 import com.davoleo.spicymod.SpicyMod;
 import com.davoleo.spicymod.item.ModItems;

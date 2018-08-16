@@ -1,4 +1,4 @@
-package com.davoleo.spicymod.item;
+package com.davoleo.spicymod.item.seed;
 
 import com.davoleo.spicymod.SpicyMod;
 import com.davoleo.spicymod.block.BlockCropBase;

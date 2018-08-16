@@ -1,13 +1,11 @@
 package com.davoleo.spicymod.block;
 
 import com.davoleo.spicymod.SpicyMod;
-import com.davoleo.spicymod.item.ItemSeedBase;
-import com.davoleo.spicymod.item.ModItems;
+import com.davoleo.spicymod.item.seed.ItemSeedBase;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
-import net.minecraftforge.client.model.ModelLoader;
 
 /*************************************************
  * Author: Davoleo
@@ -23,7 +21,7 @@ public class BlockCropBase extends BlockCrops {
     private ItemSeedBase seed;
     private ItemFood crop;
 
-    public BlockCropBase(String name, ItemSeedBase seed, ItemFood crop) {
+    public BlockCropBase( String name, ItemSeedBase seed, ItemFood crop) {
         this.name = name;
         this.seed = seed;
         this.crop = crop;
@@ -40,6 +38,8 @@ public class BlockCropBase extends BlockCrops {
     protected Item getCrop() {
         return crop;
     }
+
+
 
     public Item createItemBlock()
     {

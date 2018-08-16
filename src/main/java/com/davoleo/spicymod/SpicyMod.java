@@ -1,10 +1,10 @@
 package com.davoleo.spicymod;
 
 import com.davoleo.spicymod.block.ModBlocks;
-import com.davoleo.spicymod.init.SpicyTab;
-import com.davoleo.spicymod.init.Config;
+import com.davoleo.spicymod.util.Config;
+import com.davoleo.spicymod.util.SpicyTab;
 import com.davoleo.spicymod.item.ModItems;
-import com.davoleo.spicymod.proxy.*;
+import com.davoleo.spicymod.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;

@@ -1,5 +1,6 @@
 package com.davoleo.spicymod.item.food;
 
+import com.davoleo.spicymod.util.Tooltips;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.client.util.ITooltipFlag;
@@ -38,7 +39,7 @@ public class ItemJalapeno extends ItemFood {
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(TextFormatting.RED + "It feels spicy even to keep it in your hands!");
+        tooltip.add(Tooltips.JALAPENO);
     }
 
     @Override

@@ -1,11 +1,11 @@
 #Blocks
-tile.jalapeno_crop.name=Jalapeno Crop
+tile.jalapeno_crop.name=Jalapeño Crop
 tile.habanero_crop.name=Habanero Crop
 
 #Items
-item.jalapeno.name=Jalapeno
+item.jalapeno.name=Jalapeño
 item.habanero.name=Habanero
-item.jalapeno_seed.name=Jalapeno Seeds
+item.jalapeno_seed.name=Jalapeño Seeds
 item.habanero_seed.name=Habanero Seeds
 item.spice_hammer.name=Spice Hammer
 item.knife.name=Knife
@@ -13,4 +13,8 @@ item.knife.name=Knife
 #Tooltips
 tooltip.spicymod.jalapeno=It feels spicy even to keep it in your hands!
 tooltip.spicymod.habanero=Britghy-Spicy Sun!
-tooltip.spicymod.hammer_durability=Durability
+tooltip.spicymod.durability=Durability
+
+#Other Strings
+string.spicymod.jalapeno_resist=You resisted the spicyness of the Jalapeño
+string.spicymod.habanero_resist=You resisted the spicyness of the Habanero

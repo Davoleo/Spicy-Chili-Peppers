@@ -1,21 +1,21 @@
 package com.davoleo.spicymod.item.food;
 
-import com.davoleo.spicymod.util.Tooltips;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.util.TooltipsAndStrings;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
 /*************************************************
  * Author: Davoleo
@@ -28,24 +28,33 @@ import java.util.List;
 //ItemJalapeno permette di aggiungere item successivi con più facilità
 public class ItemJalapeno extends ItemFood {
 
+    private Random random;
+
     public ItemJalapeno()
     {
         super(3, 0.4f, false);
-        setRegistryName("jalapeno");        // The unique name that identifies this item, does NEVER change
-        setTranslationKey("jalapeno");     // Used for localization (en_US.lang)
+        setRegistryName("jalapeno");
+        setTranslationKey("jalapeno");
         setCreativeTab(SpicyMod.spicyTab);
         setAlwaysEdible();
     }
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(Tooltips.JALAPENO);
+        tooltip.add(TooltipsAndStrings.JALAPENO);
     }
 
     @Override
     protected void onFoodEaten(ItemStack Stack, World World, EntityPlayer Player)
     {
-        Player.setFire(10);
+//        if (random.nextInt(3) + 1 > 1)
+//        {
+            Player.setFire(10);
+//        }
+//        else
+//        {
+//            Player.sendMessage(new TextComponentString(TooltipsAndStrings.JALAPENO_RESIST));
+//        }
         Player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 2800, 1, false, false));
     }
 

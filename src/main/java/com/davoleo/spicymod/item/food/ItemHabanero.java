@@ -1,19 +1,21 @@
 package com.davoleo.spicymod.item.food;
 
 import com.davoleo.spicymod.SpicyMod;
-import com.davoleo.spicymod.util.Tooltips;
+import com.davoleo.spicymod.util.TooltipsAndStrings;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
 /*************************************************
  * Author: Davoleo
@@ -24,6 +26,8 @@ import java.util.List;
  **************************************************/
 
 public class ItemHabanero extends ItemFood {
+
+    private Random random;
 
     public ItemHabanero()
     {
@@ -36,12 +40,19 @@ public class ItemHabanero extends ItemFood {
 
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(Tooltips.HABANERO);
+        tooltip.add(TooltipsAndStrings.HABANERO);
     }
 
     protected void onFoodEaten(ItemStack Stack, World World, EntityPlayer Player)
     {
-        Player.setFire(6);
+//        if (random.nextInt(3) + 1 > 1)
+//        {
+            Player.setFire(6);
+//        }
+//        else
+//        {
+//            Player.sendMessage(new TextComponentString(TooltipsAndStrings.HABANERO_RESIST));
+//        }
         Player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 2400, 1, true, false));
         Player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 1, true, false));
     }

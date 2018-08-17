@@ -1,6 +1,6 @@
 package com.davoleo.spicymod.item.tool;
 
-import com.davoleo.spicymod.util.Tooltips;
+import com.davoleo.spicymod.util.TooltipsAndStrings;
 import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -37,7 +37,7 @@ public class ItemHammer extends ItemToolBase {
 
     public void addInformation(ItemStack item, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(Tooltips.HAMMER_DURABILITY + ": " + super.getDurabilityForDisplay(item));   //new ItemStack(this))
+        tooltip.add(TooltipsAndStrings.DURABILITY + ": " + super.getDurabilityForDisplay(item));   //new ItemStack(this))
     }
 
 

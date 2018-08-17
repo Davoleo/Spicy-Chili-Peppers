@@ -1,6 +1,7 @@
 package com.davoleo.spicymod.block;
 
-import com.davoleo.spicymod.item.ModItems;
+import com.davoleo.spicymod.block.crop.BlockCropHabanero;
+import com.davoleo.spicymod.block.crop.BlockCropJalapeno;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -16,8 +17,8 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModBlocks {
 
     //istanze
-   public static BlockCropBase crop_habanero = new BlockCropBase("habanero_crop", ModItems.seed_habanero, ModItems.habanero);
-   public static BlockCropBase crop_jalapeno = new BlockCropBase("jalapeno_crop", ModItems.seed_jalapeno, ModItems.jalapeno);
+   public static BlockCropHabanero crop_habanero = new BlockCropHabanero();
+   public static BlockCropJalapeno crop_jalapeno = new BlockCropJalapeno();
 
     //Registro di forge
     public static void register(IForgeRegistry<Block> registry)
@@ -40,8 +41,5 @@ public class ModBlocks {
     }
 
     //Registrazione dei modelli
-    public static void registerModels() {
-        crop_habanero.registerItemModel(crop_habanero.createItemBlock());
-        crop_jalapeno.registerItemModel(crop_jalapeno.createItemBlock());
-    }
+    public static void registerModels() {}
 }

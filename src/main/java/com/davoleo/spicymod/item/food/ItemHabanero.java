@@ -8,7 +8,6 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -29,8 +28,9 @@ public class ItemHabanero extends ItemFood {
     public ItemHabanero()
     {
         super(5,1F, false);
-        setUnlocalizedName("habanero");
-        setRegistryName(SpicyMod.MODID + ".habanero");
+        setTranslationKey("habanero");
+        setRegistryName("habanero");
+        setCreativeTab(SpicyMod.spicyTab);
         setAlwaysEdible();
     }
 

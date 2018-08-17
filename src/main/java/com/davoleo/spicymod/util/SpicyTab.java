@@ -18,11 +18,11 @@ public class SpicyTab extends CreativeTabs {
     public SpicyTab()
     {
         super(SpicyMod.MODNAME);
-        setBackgroundImageName("");
+        setBackgroundImageName("spicy.png");
     }
 
     @Override
-    public ItemStack getTabIconItem()
+    public ItemStack createIcon()
     {
         return new ItemStack(ModItems.jalapeno);
     }

@@ -2,7 +2,6 @@ package com.davoleo.spicymod.item;
 
 import com.davoleo.spicymod.SpicyMod;
 import net.minecraft.item.Item;
-import sun.security.provider.ConfigFile;
 
 /*************************************************
  * Author: Davoleo
@@ -19,7 +18,7 @@ public class ItemBase extends Item {
     public ItemBase(String name)
     {
         this.name = name;
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
 
         setCreativeTab(SpicyMod.spicyTab);

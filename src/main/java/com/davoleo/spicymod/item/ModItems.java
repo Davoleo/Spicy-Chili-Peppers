@@ -1,9 +1,12 @@
 package com.davoleo.spicymod.item;
 
+import com.davoleo.spicymod.SpicyMod;
 import com.davoleo.spicymod.block.ModBlocks;
 import com.davoleo.spicymod.item.food.ItemHabanero;
 import com.davoleo.spicymod.item.food.ItemJalapeno;
 import com.davoleo.spicymod.item.seed.ItemSeedBase;
+import com.davoleo.spicymod.item.tool.ItemHammer;
+import com.davoleo.spicymod.item.tool.ItemKnife;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -23,6 +26,9 @@ public class ModItems{
     public static ItemJalapeno jalapeno = new ItemJalapeno();
     public static ItemHabanero habanero = new ItemHabanero();
 
+    public static ItemHammer hammer = new ItemHammer(SpicyMod.spiceToolMaterial);
+    public static ItemKnife knife = new ItemKnife(Item.ToolMaterial.IRON);
+
     //Registro di forge
     public static void register(IForgeRegistry<Item> registry)
     {
@@ -30,7 +36,10 @@ public class ModItems{
                 seed_jalapeno,
                 seed_habanero,
                 jalapeno,
-                habanero
+                habanero,
+
+                hammer,
+                knife
         );
     }
 
@@ -41,6 +50,9 @@ public class ModItems{
         seed_jalapeno.registerItemModel();
         jalapeno.registerItemModel();
         habanero.registerItemModel();
+
+        hammer.registerItemModel();
+        knife.registerItemModel();
     }
 
 }

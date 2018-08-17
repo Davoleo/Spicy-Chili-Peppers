@@ -32,7 +32,7 @@ public class ItemJalapeno extends ItemFood {
     {
         super(3, 0.4f, false);
         setRegistryName("jalapeno");        // The unique name that identifies this item, does NEVER change
-        setUnlocalizedName(SpicyMod.MODID + ".jalapeno");     // Used for localization (en_US.lang)
+        setTranslationKey("jalapeno");     // Used for localization (en_US.lang)
         setCreativeTab(SpicyMod.spicyTab);
         setAlwaysEdible();
     }

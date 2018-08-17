@@ -22,7 +22,7 @@ public class ItemSeedBase extends ItemSeeds {
     {
 
         super(crop, Blocks.FARMLAND);
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
 
         this.name = name;

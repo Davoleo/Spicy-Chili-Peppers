@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -24,6 +25,8 @@ public class SpicyMod {
     public static final String MODID = "spicymod";
     public static final String MODNAME = "Spicy Chili Peppers";
     public static final String MODVERSION = "@VERSION@";
+
+    public static final Item.ToolMaterial spiceToolMaterial = EnumHelper.addToolMaterial("SPICE", 3, 500, 10, 6, 10);
 
     public static Configuration config;
 

@@ -1,3 +1,16 @@
-//Tooltips
+#Blocks
+tile.jalapeno_crop.name=Jalapeno Crop
+tile.habanero_crop.name=Habanero Crop
+
+#Items
+item.jalapeno.name=Jalapeno
+item.habanero.name=Habanero
+item.jalapeno_seed.name=Jalapeno Seeds
+item.habanero_seed.name=Habanero Seeds
+item.spice_hammer.name=Spice Hammer
+item.knife.name=Knife
+
+#Tooltips
 tooltip.spicymod.jalapeno=It feels spicy even to keep it in your hands!
 tooltip.spicymod.habanero=Britghy-Spicy Sun!
+tooltip.spicymod.hammer_durability=Durability

@@ -25,7 +25,7 @@ public class BlockCropBase extends BlockCrops {
         this.name = name;
         this.seed = seed;
         this.crop = crop;
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
     }
 

@@ -3,7 +3,7 @@
   "modid": "spicymod",
   "name": "Spicy Chili Peppers Mod",
   "description": "A mod about chili peppers and their spicyness",
-  "version": "${version}",
+  "version": "${mod_version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",

@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.io.File;
 
-@Mod(modid = SpicyMod.MODID, name = SpicyMod.MODNAME, version = SpicyMod.MODVERSION,  useMetadata = true)
+@Mod(modid = SpicyMod.MODID, name = SpicyMod.MODNAME, version = SpicyMod.MODVERSION)
 public class SpicyMod {
     public static final String MODID = "spicymod";
     public static final String MODNAME = "Spicy Chili Peppers";

@@ -17,18 +17,10 @@ hs_err_pid*
 
 build/
 
-gradle/
-
 out/
 
 run/
 
 eula\.txt
 
-gradlew\.bat
-
 gradlew
-
-gradle\.properties
-
-build\.gradle

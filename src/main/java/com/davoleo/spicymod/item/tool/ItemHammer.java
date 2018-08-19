@@ -9,6 +9,8 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -27,12 +29,40 @@ import java.util.Set;
 public class ItemHammer extends ItemToolBase {
 
     private static final Set<Block> EFFECTIVE_ON_BLOCK = Sets.newHashSet(Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.DOUBLE_STONE_SLAB, Blocks.GOLDEN_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE, Blocks.RAIL, Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB, Blocks.STONE_BUTTON, Blocks.STONE_PRESSURE_PLATE);
+    private int mode;
 
     public ItemHammer(ToolMaterial material)
     {
         super(material, EFFECTIVE_ON_BLOCK);
         setTranslationKey("spice_hammer");
         setRegistryName("spice_hammer");
+    }
+
+    public ActionResult<ItemStack> onItemRightClick (World world, EntityPlayer player, EnumHand handIn)
+    {
+        switch(mode)
+        {
+            case 0:
+                //return ActionResult
+        }
+        return null;
+    }
+
+    public String getModeName(int mode)
+    {
+        this.mode = mode;
+
+        switch(mode)
+        {
+            case 0:
+                return "Lightning";
+            case 1:
+                return "Fireball";
+            case 2:
+                return "Grenade";
+            default:
+                return "Hammer";
+        }
     }
 
     public void addInformation(ItemStack item, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)

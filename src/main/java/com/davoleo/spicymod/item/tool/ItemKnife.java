@@ -22,7 +22,7 @@ public class ItemKnife extends ItemTool {
 
     public ItemKnife(ToolMaterial material)
     {
-        super(material.getAttackDamage(), 1F, ToolMaterial.IRON, EFFECTIVE_ON_BLOCK );
+        super(material.getAttackDamage() - 2, 1F, ToolMaterial.IRON, EFFECTIVE_ON_BLOCK );
         setTranslationKey("knife");
         setRegistryName("knife");
     }

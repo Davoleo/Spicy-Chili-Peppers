@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 //----------------------------------------------------------------------------------------------------
 
-version = "${mod_version}"
+version = "0.1.0"
 group = "com.davoleo.spicymod"
 archivesBaseName = "SpicyChiliPeppers"
 
@@ -21,11 +21,9 @@ compileJava {
 }
 
 minecraft {
-    version = "${mc_version}-${forge_version}"
+    version = "1.12.2-14.23.5.2824"
     runDir = "run"
-    mappings = "${mappings_version}"
-    replace "@VERSION@", project.version.toString()
-    replaceIn "SpicyMod.java"
+    mappings = "stable_39"
 }
 
 repositories{

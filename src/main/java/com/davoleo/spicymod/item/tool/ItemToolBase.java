@@ -1,10 +1,9 @@
 package com.davoleo.spicymod.item.tool;
 
 import com.davoleo.spicymod.SpicyMod;
-import com.davoleo.spicymod.util.Config;
+import com.davoleo.spicymod.config.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;

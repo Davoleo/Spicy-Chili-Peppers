@@ -37,7 +37,7 @@ public class ItemToolBase extends ItemTool {
         setCreativeTab(SpicyMod.spicyTab);
     }
 
-    //Method created from the model of EwyBoy
+    //Method modelled off of EwyBoy's code
     //Github Profile: https://github.com/EwyBoy
     @Override
     public boolean onBlockDestroyed(ItemStack stack, World world, IBlockState state, BlockPos pos, EntityLivingBase entityLiving) {
@@ -74,12 +74,8 @@ public class ItemToolBase extends ItemTool {
                                 if ((stack.getMaxDamage() - stack.getItemDamage()) >= 1 && targetBlock.getBlock() != Blocks.BEDROCK)
                                 {
                                     if (targetBlock.getBlock().getExpDrop(targetBlock, world, targetPos, 0) > 0)
-                                    {
                                         if (!world.isRemote && world.getGameRules().getBoolean("doTileDrops"))
-                                        {
-                                            world.spawnEntity(new EntityXPOrb(world, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, world.getBlockState(pos).getBlock().getExpDrop(targetBlock, world, targetPos, 0)));
-                                        }
-                                    }
+                                            world.spawnEntity(new EntityXPOrb(world, (double) pos.getX() + 0.5D, (double) pos.getY() + 0.5D, (double) pos.getZ() + 0.5D, world.getBlockState(pos).getBlock().getExpDrop(targetBlock, world, targetPos, 0)));
                                     world.destroyBlock(new BlockPos(x, y, z), true);
                                 }
                                 stack.damageItem(1, player);

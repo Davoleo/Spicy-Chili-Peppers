@@ -10,6 +10,7 @@ import com.davoleo.spicymod.item.seed.ItemSeedHabanero;
 import com.davoleo.spicymod.item.seed.ItemSeedJalapeno;
 import com.davoleo.spicymod.item.tool.ItemHammer;
 import com.davoleo.spicymod.item.tool.ItemKnife;
+import com.davoleo.spicymod.item.tool.ItemSpiceBow;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -34,6 +35,7 @@ public class ModItems{
 
     public static ItemHammer hammer = new ItemHammer(SpicyMod.spiceToolMaterial);
     public static ItemKnife knife = new ItemKnife(Item.ToolMaterial.IRON);
+    public static ItemSpiceBow spice_bow = new ItemSpiceBow();
 
     //Registro di forge
     public static void register(IForgeRegistry<Item> registry)
@@ -48,7 +50,8 @@ public class ModItems{
                 chili_meat,
 
                 hammer,
-                knife
+                knife,
+                spice_bow
         );
     }
 
@@ -65,6 +68,7 @@ public class ModItems{
 
         hammer.registerItemModel();
         knife.registerItemModel();
+        spice_bow.registerItemModel();
     }
 
 }

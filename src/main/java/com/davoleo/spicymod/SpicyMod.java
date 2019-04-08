@@ -1,8 +1,10 @@
 package com.davoleo.spicymod;
 
+import com.davoleo.spicymod.handler.ArrowHandler;
 import com.davoleo.spicymod.proxy.CommonProxy;
 import com.davoleo.spicymod.util.SpicyTab;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -29,7 +31,7 @@ public class SpicyMod {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        MinecraftForge.EVENT_BUS.register(ArrowHandler.class);
     }
 
     @Mod.EventHandler

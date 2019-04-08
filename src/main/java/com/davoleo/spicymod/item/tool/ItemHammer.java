@@ -67,11 +67,11 @@ public class ItemHammer extends ItemToolBase {
 
     public void addInformation(ItemStack item, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(TooltipsAndStrings.DURABILITY + ": " + super.getDurabilityForDisplay(item));   //new ItemStack(this))
+        tooltip.add(TooltipsAndStrings.DURABILITY + ": " + this.getDurabilityForDisplay(item) * 100);   //new ItemStack(this))
     }
 
 
-    //Method created from the model of EwyBoy
+    //Method modelled off of EwyBoy's code
     //Github Profile: https://github.com/EwyBoy
     @Override
     public boolean canHarvestBlock(IBlockState blockState)

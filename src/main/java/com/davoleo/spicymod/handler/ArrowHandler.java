@@ -1,8 +1,6 @@
 package com.davoleo.spicymod.handler;
 
-import com.davoleo.spicymod.item.ModItems;
 import com.davoleo.spicymod.item.tool.ItemSpiceBow;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 
 /*************************************************
@@ -15,7 +13,7 @@ import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 
 public class ArrowHandler {
 
-    public static void onArrowShot(ArrowLooseEvent event)
+    public static void onBowReleased(ArrowLooseEvent event)
     {
         if (event.getBow().getItem() instanceof ItemSpiceBow)
         {

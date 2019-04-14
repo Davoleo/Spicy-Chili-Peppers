@@ -8,6 +8,7 @@ import com.davoleo.spicymod.item.food.ItemHabanero;
 import com.davoleo.spicymod.item.food.ItemJalapeno;
 import com.davoleo.spicymod.item.seed.ItemSeedHabanero;
 import com.davoleo.spicymod.item.seed.ItemSeedJalapeno;
+import com.davoleo.spicymod.item.seed.ItemSpiceSeed;
 import com.davoleo.spicymod.item.tool.ItemHammer;
 import com.davoleo.spicymod.item.tool.ItemKnife;
 import com.davoleo.spicymod.item.tool.ItemSpiceBow;
@@ -25,8 +26,8 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModItems{
 
     //istanze
-    public static ItemSeedJalapeno seed_jalapeno = new ItemSeedJalapeno();
-    public static ItemSeedHabanero seed_habanero = new ItemSeedHabanero();
+    public static ItemSpiceSeed seed_jalapeno = new ItemSpiceSeed("jalapeno_seeds");
+    public static ItemSpiceSeed seed_habanero = new ItemSpiceSeed("habanero_seeds");
 
     public static ItemJalapeno jalapeno = new ItemJalapeno();
     public static ItemHabanero habanero = new ItemHabanero();

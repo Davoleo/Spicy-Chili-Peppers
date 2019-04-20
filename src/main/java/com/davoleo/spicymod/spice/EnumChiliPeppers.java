@@ -1,11 +1,5 @@
 package com.davoleo.spicymod.spice;
 
-import com.davoleo.spicymod.block.ModBlocks;
-import com.davoleo.spicymod.item.ModItems;
-import net.minecraft.block.BlockCrops;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemSeeds;
-
 /*************************************************
  * Author: Davoleo
  * Date / Hour: 14/04/2019 / 18:03
@@ -16,20 +10,20 @@ import net.minecraft.item.ItemSeeds;
 
 public enum EnumChiliPeppers {
 
-    JALAPENO(1, ModItems.seed_jalapeno, ModBlocks.crop_jalapeno),
-    HABANERO(2, ModItems.seed_habanero, ModBlocks.crop_habanero);
+    JALAPENO(1, "jalapeno", 3, 0.4F),
+    HABANERO(2, "habanero", 5, 1F),;
 
     private int id;
-    private ItemSeeds seeds;
-    private BlockCrops crop;
-    private SpiceStats fruit;
+    private String name;
+    private int foodPts;
+    private float saturationPts;
 
-    EnumChiliPeppers(int id, ItemSeeds seeds, BlockCrops crop, SpiceStats fruit)
+    EnumChiliPeppers(int id, String name, int foodPts, float saturationPts)
     {
         this.id = id;
-        this.seeds = seeds;
-        this.crop = crop;
-        this.fruit = fruit;
+        this.name = name;
+        this.foodPts = foodPts;
+        this.saturationPts = saturationPts;
     }
 
     public int getId()
@@ -37,26 +31,19 @@ public enum EnumChiliPeppers {
         return id;
     }
 
-    public ItemSeeds getSeeds()
+    public String getName()
     {
-        return seeds;
+        return name;
     }
 
-    public BlockCrops getCrop()
+    public int getFoodPts()
     {
-        return crop;
+        return foodPts;
     }
 
-    public SpiceStats getFruit()
+    public float getSaturationPts()
     {
-        return fruit;
-    }
-
-    private class SpiceStats
-    {
-        private int foodPts;
-        private int saturationPts;
-
+        return saturationPts;
     }
 }
 

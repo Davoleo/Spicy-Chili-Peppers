@@ -1,8 +1,10 @@
 package com.davoleo.spicymod.block.crop;
 
 import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.item.food.ItemSpice;
 import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import com.davoleo.spicymod.spice.IChiliPepper;
+import com.davoleo.spicymod.spice.SpiceUtils;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -49,14 +51,14 @@ public class BlockSpiceCrop extends BlockCrops implements IChiliPepper {
     @Override
     protected Item getCrop()
     {
-        return this.getType().getFruit();
+        return SpiceUtils.getFruitFromType(this.getType());
     }
 
     @Nonnull
     @Override
     protected Item getSeed()
     {
-        return this.getType().getSeeds();
+        return SpiceUtils.getSeedFromType(this.getType());
     }
 
     @SideOnly(Side.CLIENT)

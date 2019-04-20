@@ -1,5 +1,6 @@
 package com.davoleo.spicymod.item.food;
 
+import com.davoleo.spicymod.spice.SpiceUtils;
 import net.minecraft.item.ItemFood;
 
 /*************************************************
@@ -16,6 +17,6 @@ public class ItemSpice extends ItemFood {
 
     public ItemSpice(String name)
     {
-        super(amount, saturation, false);
+        super(SpiceUtils.getSpiceTypeFromName(name).getFoodPts(), SpiceUtils.getSpiceTypeFromName(name).getSaturationPts(), false);
     }
 }

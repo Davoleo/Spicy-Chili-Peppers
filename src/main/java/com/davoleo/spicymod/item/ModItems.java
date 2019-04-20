@@ -59,8 +59,8 @@ public class ModItems{
 //Registrazione dei modelli
     public static void registerModels()
     {
-        seed_habanero.registerItemModel();
-        seed_jalapeno.registerItemModel();
+        seed_habanero.initModel();
+        seed_jalapeno.initModel();
 
         jalapeno.registerItemModel();
         habanero.registerItemModel();

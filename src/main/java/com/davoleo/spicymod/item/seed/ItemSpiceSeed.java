@@ -26,7 +26,7 @@ public class ItemSpiceSeed extends ItemSeeds implements IChiliPepper {
 
     public ItemSpiceSeed(String name)
     {
-        super(SpiceUtils.getSpiceTypeFromName(name).getCrop(), Blocks.FARMLAND);
+        super(SpiceUtils.getCropFromName(name), Blocks.FARMLAND);
         setRegistryName(new ResourceLocation(SpicyMod.MODID, name));
         setTranslationKey(SpicyMod.MODID + "." + name);
         setCreativeTab(SpicyMod.spicyTab);

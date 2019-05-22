@@ -1,7 +1,6 @@
 package com.davoleo.spicymod.block.crop;
 
 import com.davoleo.spicymod.SpicyMod;
-import com.davoleo.spicymod.item.food.ItemSpice;
 import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import com.davoleo.spicymod.spice.IChiliPepper;
 import com.davoleo.spicymod.spice.SpiceUtils;

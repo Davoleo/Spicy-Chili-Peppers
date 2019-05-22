@@ -8,8 +8,8 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["Davoleo"],
-  "credits": "Davoleo",
-  "logoFile": "",
+  "credits": "Credits to Matpac for creating all the art assets for this mod",
+  "logoFile": "assets/spicymod/textures/spicy_mod_logo.png",
   "screenshots": [],
   "dependencies": []
 }

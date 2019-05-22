@@ -8,6 +8,8 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
+
 /*************************************************
  * Author: Davoleo
  * Date: 17/08/2018
@@ -27,6 +29,7 @@ public class ItemChili extends ItemFood {
         setAlwaysEdible();
     }
 
+    @Nonnull
     public EnumAction getItemUseAction(ItemStack stack)
     {
         return EnumAction.DRINK;

@@ -26,11 +26,4 @@ public class ItemKnife extends ItemTool {
         setTranslationKey("knife");
         setRegistryName("knife");
     }
-
-    public void registerItemModel()
-    {
-        SpicyMod.proxy.registerItemRenderer(this, 0, "knife");
-    }
-
-
 }

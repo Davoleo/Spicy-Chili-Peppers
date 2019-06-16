@@ -1,6 +1,7 @@
 package com.davoleo.spicymod.block.crop;
 
 import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.block.ModBlocks;
 import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import com.davoleo.spicymod.spice.IChiliPepper;
 import com.davoleo.spicymod.spice.SpiceUtils;
@@ -11,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import sun.security.provider.ConfigFile;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -25,44 +27,33 @@ import java.util.Objects;
 
 public class BlockSpiceCrop extends BlockCrops implements IChiliPepper {
 
-    private String name;
+    private EnumChiliPeppers chiliPepper;
 
-    public BlockSpiceCrop(String name)
+    public BlockSpiceCrop(EnumChiliPeppers chiliPepper)
     {
-        this.name = name;
-        setRegistryName(new ResourceLocation(SpicyMod.MODID, name));
-        setTranslationKey(SpicyMod.MODID + "." + name);
+        this.chiliPepper = chiliPepper;
+        setRegistryName(new ResourceLocation(SpicyMod.MODID, chiliPepper.getName() + "_crop"));
+        setTranslationKey(SpicyMod.MODID + "." + chiliPepper.getName() + "_crop");
+        ModBlocks.cropBlocks.add(this);
     }
 
     @Override
     public EnumChiliPeppers getType()
     {
-        for (EnumChiliPeppers type : EnumChiliPeppers.values())
-        {
-            if (name.toUpperCase().contains(type.name()))
-                return type;
-        }
-
-        return null;
+        return chiliPepper;
     }
 
     @Nonnull
     @Override
     protected Item getCrop()
     {
-        return SpiceUtils.getFruitFromType(this.getType());
+        return SpiceUtils.getFruitFromType(chiliPepper);
     }
 
     @Nonnull
     @Override
     protected Item getSeed()
     {
-        return SpiceUtils.getSeedFromType(this.getType());
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel()
-    {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Objects.requireNonNull(getRegistryName()), "inventory"));
+        return SpiceUtils.getSeedsFromType(chiliPepper);
     }
 }

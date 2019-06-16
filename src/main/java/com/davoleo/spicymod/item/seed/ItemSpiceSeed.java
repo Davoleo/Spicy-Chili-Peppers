@@ -1,13 +1,17 @@
 package com.davoleo.spicymod.item.seed;
 
 import com.davoleo.spicymod.SpicyMod;
+import com.davoleo.spicymod.item.ModItems;
 import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import com.davoleo.spicymod.spice.IChiliPepper;
 import com.davoleo.spicymod.spice.SpiceUtils;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,32 +26,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSpiceSeed extends ItemSeeds implements IChiliPepper {
 
-    private String name;
+    private final EnumChiliPeppers chiliPepper;
 
-    public ItemSpiceSeed(String name)
+    public ItemSpiceSeed(EnumChiliPeppers chiliPepper)
     {
-        super(SpiceUtils.getCropFromName(name), Blocks.FARMLAND);
-        setRegistryName(new ResourceLocation(SpicyMod.MODID, name));
-        setTranslationKey(SpicyMod.MODID + "." + name);
+        super(SpiceUtils.getCropFromType(chiliPepper), Blocks.FARMLAND);
+        this.chiliPepper = chiliPepper;
+        setRegistryName(new ResourceLocation(SpicyMod.MODID, chiliPepper.getName() + "_seeds"));
+        setTranslationKey(SpicyMod.MODID + "." + chiliPepper.getName() + "_seeds");
         setCreativeTab(SpicyMod.spicyTab);
+        ModItems.seeds.add(this);
     }
 
     @Override
     public EnumChiliPeppers getType()
     {
-        for (EnumChiliPeppers type : EnumChiliPeppers.values())
-        {
-            if (name.toUpperCase().contains(type.name()))
-                return type;
-        }
-
-        return null;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel()
-    {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(SpicyMod.MODID, "inventory"));
+        return chiliPepper;
     }
 
 

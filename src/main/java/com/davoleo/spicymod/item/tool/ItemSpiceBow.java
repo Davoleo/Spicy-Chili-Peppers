@@ -20,9 +20,4 @@ public class ItemSpiceBow extends ItemBow {
         setRegistryName(new ResourceLocation(SpicyMod.MODID, "spice_bow"));
 
     }
-
-    public void registerItemModel()
-    {
-        SpicyMod.proxy.registerItemRenderer(this, 0, "spice_bow");
-    }
 }

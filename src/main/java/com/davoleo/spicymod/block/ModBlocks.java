@@ -1,9 +1,13 @@
 package com.davoleo.spicymod.block;
 
 import com.davoleo.spicymod.block.crop.BlockSpiceCrop;
+import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /*************************************************
  * Author: Davoleo
@@ -15,30 +19,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
 
-    //Block instances
-    public static BlockSpiceCrop crop_habanero = new BlockSpiceCrop("habanero_crop");
-    public static BlockSpiceCrop crop_jalapeno = new BlockSpiceCrop("jalapeno_crop");
+    public static List<BlockSpiceCrop> cropBlocks = new ArrayList<>();
 
     //Registro di forge
     public static void register(IForgeRegistry<Block> registry)
     {
-        registry.registerAll(
-                crop_habanero,
-                crop_jalapeno
-        );
-    }
-
-    //Registrazione itemblock
-    public static void registerItemBlocks(IForgeRegistry<Item> registry)
-    {
-        registry.registerAll(
-        );
-    }
-
-    //Registrazione dei modelli
-    public static void registerModels()
-    {
-        crop_habanero.initModel();
-        crop_jalapeno.initModel();
+        for (EnumChiliPeppers type : EnumChiliPeppers.values())
+            registry.register(new BlockSpiceCrop(type));
     }
 }

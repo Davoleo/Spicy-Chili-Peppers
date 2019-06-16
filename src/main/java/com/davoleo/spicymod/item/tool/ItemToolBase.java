@@ -94,10 +94,4 @@ public class ItemToolBase extends ItemTool {
                 return false;
             }
     }
-
-    public void registerItemModel()
-    {
-        SpicyMod.proxy.registerItemRenderer(this, 0, "hammer");
-    }
-
 }

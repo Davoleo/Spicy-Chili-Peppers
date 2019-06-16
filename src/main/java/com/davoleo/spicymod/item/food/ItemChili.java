@@ -42,9 +42,4 @@ public class ItemChili extends ItemFood {
         player.addItemStackToInventory(new ItemStack(Items.GLASS_BOTTLE));
     }
 
-    public void registerItemModel()
-    {
-        SpicyMod.proxy.registerItemRenderer(this, 0, "chili_sauce");
-    }
-
 }

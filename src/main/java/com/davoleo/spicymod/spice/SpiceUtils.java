@@ -1,9 +1,10 @@
 package com.davoleo.spicymod.spice;
 
+import com.davoleo.spicymod.block.ModBlocks;
 import com.davoleo.spicymod.block.crop.BlockSpiceCrop;
+import com.davoleo.spicymod.item.ModItems;
 import com.davoleo.spicymod.item.food.ItemSpice;
 import com.davoleo.spicymod.item.seed.ItemSpiceSeed;
-import net.minecraft.block.BlockCrops;
 
 /*************************************************
  * Author: Davoleo
@@ -15,34 +16,34 @@ import net.minecraft.block.BlockCrops;
 
 public class SpiceUtils {
 
-    public static EnumChiliPeppers getSpiceTypeFromName(String name)
+    public static ItemSpiceSeed getSeedsFromType(EnumChiliPeppers type)
     {
-         for (EnumChiliPeppers type : EnumChiliPeppers.values())
-         {
-             if (name.contains(type.getName()))
-             {
-                 return type;
-             }
-         }
-
-         return null;
-    }
-
-    public static BlockCrops getCropFromName(String name)
-    {
-        return new BlockSpiceCrop(name);
+        for (ItemSpiceSeed seed : ModItems.seeds)
+        {
+            if (seed.getType() == type)
+                return seed;
+        }
+        throw null;
     }
 
     public static ItemSpice getFruitFromType(EnumChiliPeppers type)
     {
-       return new ItemSpice(type.getName());
+        for (ItemSpice fruit : ModItems.spices)
+        {
+            if (fruit.getType() == type)
+                return fruit;
+        }
+        return null;
     }
 
-    public static ItemSpiceSeed getSeedFromType(EnumChiliPeppers type)
+    public static BlockSpiceCrop getCropFromType(EnumChiliPeppers type)
     {
-        return new ItemSpiceSeed(type.getName());
+        for (BlockSpiceCrop crop : ModBlocks.cropBlocks)
+        {
+            if (crop.getType() == type)
+                return crop;
+        }
+        return null;
     }
-
-
 
 }

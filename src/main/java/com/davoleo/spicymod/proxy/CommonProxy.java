@@ -16,10 +16,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class CommonProxy {
 
-    public void registerItemRenderer(Item item, int meta, String id)
-    {}
-
-
     public String localize(String unlocalized, Object... args)
     {
         return I18n.format(unlocalized, args);

@@ -24,6 +24,6 @@ public class SpicyTab extends CreativeTabs {
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(ModItems.jalapeno);
+        return new ItemStack(ModItems.spices.get(0));
     }
 }

@@ -20,9 +20,4 @@ public class ItemChiliMeat extends ItemFood{
         setTranslationKey("chili_meat");
         setCreativeTab(SpicyMod.spicyTab);
     }
-
-    public void registerItemModel()
-    {
-        SpicyMod.proxy.registerItemRenderer(this, 0, "chili_meat");
-    }
 }

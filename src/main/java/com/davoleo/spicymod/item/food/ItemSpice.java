@@ -4,9 +4,15 @@ import com.davoleo.spicymod.SpicyMod;
 import com.davoleo.spicymod.item.ModItems;
 import com.davoleo.spicymod.spice.EnumChiliPeppers;
 import com.davoleo.spicymod.spice.IChiliPepper;
-import com.davoleo.spicymod.spice.SpiceUtils;
+import com.davoleo.spicymod.util.TooltipsAndStrings;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /*************************************************
  * Author: Davoleo
@@ -34,5 +40,19 @@ public class ItemSpice extends ItemFood implements IChiliPepper {
     public EnumChiliPeppers getType()
     {
         return chiliPepper;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
+    {
+        switch (getType())
+        {
+            case HABANERO:
+                tooltip.add(TooltipsAndStrings.HABANERO);
+                break;
+            case JALAPENO:
+                tooltip.add(TooltipsAndStrings.JALAPENO);
+                break;
+        }
     }
 }

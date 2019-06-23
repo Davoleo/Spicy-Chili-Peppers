@@ -7,42 +7,42 @@
     "age": {
       "0": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/0"
+          "cross": "spicymod:blocks/crop/spicy_crop0"
         }
       },
       "1": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/1"
+          "cross": "spicymod:blocks/crop/spicy_crop1"
         }
       },
       "2": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/2"
+          "cross": "spicymod:blocks/crop/spicy_crop2"
         }
       },
       "3": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/3"
+          "cross": "spicymod:blocks/crop/spicy_crop3"
         }
       },
       "4": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/4"
+          "cross": "spicymod:blocks/crop/spicy_crop4"
         }
       },
       "5": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/5"
+          "cross": "spicymod:blocks/crop/spicy_crop5"
         }
       },
       "6": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/6"
+          "cross": "spicymod:blocks/crop/spicy_crop6"
         }
       },
       "7": {
         "textures": {
-          "cross": "spicymod:blocks/crop/jalapeno/7"
+          "cross": "spicymod:blocks/crop/jalapeno_crop"
         }
       }
     }

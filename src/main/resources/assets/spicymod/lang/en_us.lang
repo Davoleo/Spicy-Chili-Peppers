@@ -1,14 +1,14 @@
 #Blocks
-tile.jalapeno_crop.name=Jalapeño Crop
-tile.habanero_crop.name=Habanero Crop
+tile.spicy_mod.jalapeno_crop.name=Jalapeño Crop
+tile.spicy_mod.habanero_crop.name=Habanero Crop
 
 #Items
-item.jalapeno.name=Jalapeño
-item.habanero.name=Habanero
-item.jalapeno_seed.name=Jalapeño Seeds
-item.habanero_seed.name=Habanero Seeds
-item.spice_hammer.name=Spice Hammer
-item.knife.name=Knife
+item.spicy_mod.jalapeno.name=Jalapeño
+item.spicy_mod.habanero.name=Habanero
+item.spicy_mod.jalapeno_seed.name=Jalapeño Seeds
+item.spicy_mod.habanero_seed.name=Habanero Seeds
+item.spicy_mod.spice_hammer.name=Spice Hammer
+item.spicy_mod.knife.name=Knife
 
 #Tooltips
 tooltip.spicymod.jalapeno=It feels spicy even to keep it in your hands!

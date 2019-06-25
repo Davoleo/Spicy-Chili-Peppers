@@ -68,6 +68,12 @@ public class ItemSpiceBow extends ItemBow {
         super.onPlayerStoppedUsing(stack, worldIn, entityLiving, timeLeft);
     }
 
+    @Override
+    protected boolean isArrow(ItemStack stack)
+    {
+        return super.isArrow(stack);
+    }
+
     //TODO Maybe tweak zooming
     public float getZoom(EntityLivingBase entity) {
         return 1 - MathHelper.clamp(this.getMaxItemUseDuration(null) - entity.getItemInUseCount(), 0, 20) / 60;

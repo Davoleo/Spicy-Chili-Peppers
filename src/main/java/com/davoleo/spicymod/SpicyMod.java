@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class SpicyMod {
     public static final String MODID = "spicymod";
     public static final String MODNAME = "Spicy Chili Peppers";
-    public static final String MODVERSION = "0.1.0";
+    public static final String MODVERSION = "0.0.1";
 
     public static final Item.ToolMaterial spiceToolMaterial = EnumHelper.addToolMaterial("SPICE", 3, 500, 14, 6, 10);
 
